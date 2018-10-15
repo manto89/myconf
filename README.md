@@ -114,6 +114,26 @@ memory {
         format_degraded = "MEMORY < %available"
 }
 ```
+Create file .xinitrc
+```console
+foo@bar:~$ vim ~/.xinitrc
+```
+```
+start i3
+```
+Test for errors
+```console
+foo@bar:~$ startx
+```
+If everything is fine add in the first line of .zshrc
+```console
+foo@bar:~$ vim ~/.zshrc
+```
+```
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+	startx
+fi
+```
 Reload i3
 ```
 Meta+Shift+R
@@ -153,3 +173,6 @@ add the following text
 ```
 udiskie &
 ```
+## Install VirtualBox
+```console
+
