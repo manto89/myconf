@@ -116,7 +116,7 @@ memory {
 ```
 Reload i3
 ```
-<kbd>Meta</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>
+Meta+Shift+R
 ```
 ## AUTO MOUNT USB
 Install udiskie
