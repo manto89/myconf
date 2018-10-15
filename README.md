@@ -1,4 +1,4 @@
-#AUTO MOUNT USB#
+#AUTO MOUNT USB
 Install udiskie
 ```console
 foo@bar:~$ sudo apt-get install python-setuptools udisks2 python-pip python-gobject python-yaml libgio2.0 gobject-introspection libgtk2.0-0 libnotify4 gettext gir1.2-notify-0.7
