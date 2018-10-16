@@ -182,4 +182,20 @@ udiskie &
 ```console
 
 ```
-
+## Install JetBrains Rider
+Install Mono Develop
+```console
+foo@bar:~$ sudo apt install apt-transport-https dirmngr
+foo@bar:~$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+foo@bar:~$ echo "deb https://download.mono-project.com/repo/debian stable-stretch main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+foo@bar:~$ sudo apt update
+foo@bar:~$ sudo apt install mono-devel mono-xsp4
+```
+Download and install rider
+```console
+foo@bar:~$ wget https://download-cf.jetbrains.com/rider/JetBrains.Rider-2018.2.3.tar.gz
+foo@bar:~$ tar -xvf ./JetBrains.Rider-2018.2.3.tar.gz
+foo@bar:~$ sudo mkdir -p /opt/rider-2018.2.3
+foo@bar:~$ sudo cp -r ./JetBrains.Rider-2018.2.3/* /opt/rider-2018.2.3/
+foo@bar:~$ sudo ln -s /opt/rider /opt/rider-2018.2.3/bin/rider.sh
+```
