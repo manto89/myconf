@@ -138,6 +138,11 @@ Reload i3
 ```
 Meta+Shift+R
 ```
+### Change terminal emulator
+```console
+sudo update-alternatives --config x-terminal-emulator
+```
+
 ## AUTO MOUNT USB
 Install udiskie
 ```console
@@ -175,4 +180,6 @@ udiskie &
 ```
 ## Install VirtualBox
 ```console
+
+```
 
