@@ -92,7 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lsl="ls -altr"
+alias lsl="ls -altrh"
 alias cp="cp -i"
 alias mv="mv -i"
 alias cpr="rsync -avhW --progress"
