@@ -180,7 +180,13 @@ udiskie &
 ```
 ## Install VirtualBox
 ```console
-
+foo@bar:~$ sudo apt install virtualbox virtualbox-guest-additions-iso
+foo@bar:~$ LatestVirtualBoxVersion=$(wget -qO - http://download.virtualbox.org/virtualbox/LATEST.TXT) && wget "http://download.virtualbox.org/virtualbox/${LatestVirtualBoxVersion}/Oracle_VM_VirtualBox_Extension_Pack-${LatestVirtualBoxVersion}.vbox-extpack"
+foo@bar:~$ sudo VBoxManage extpack install --replace Oracle_VM_VirtualBox_Extension_Pack-${LatestVirtualBoxVersion}.vbox-extpack 
+```
+To uninstall
+```console
+foo@bar:~$ sudo VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
 ```
 ## Install JetBrains Rider
 Install Mono Develop
