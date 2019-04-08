@@ -16,7 +16,7 @@ foo ALL=(ALL) NOPASSWD:ALL
 Logout and login with user
 ```console
 foo@bar:$ sudo apt-get update && sudo apt-get upgrade
-foo@bar:$ sudo apt-get install git curl zsh tree vim
+foo@bar:$ sudo apt-get install git curl zsh tree vim bc tmux
 foo@bar:$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 foo@bar:$ chsh -s /bin/zsh
 foo@bar:$ zsh
