@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("org-refile-last-stored"
+ (filename . "~/git/org/unito.org")
+ (front-context-string . "** PHONE  elisa.")
+ (rear-context-string . "2-05 Wed 19:46]\n")
+ (position . 2567))
+("org-capture-last-stored"
+ (filename . "~/git/org/refile.org")
+ (front-context-string . "* TODO Check ser")
+ (rear-context-string . "2-06 Thu 16:58]\n")
+ (position . 1512))
+)
