@@ -18,7 +18,7 @@
 ;; can override the document org-agenda-files by setting your
 ;; org-agenda-files in the variable org-user-agenda-files
 ;;
-(setq org-agenda-files (list "/home/manto89/git/org"))
+(setq org-agenda-files (list "~/git/org"))
 ;; Custom Key Bindings
 (global-set-key (kbd "<f12>") 'org-agenda)
 (global-set-key (kbd "<f5>") 'bh/org-todo)
