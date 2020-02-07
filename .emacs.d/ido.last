@@ -1,0 +1,46 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/" . "twinhelix/")
+ ("/home/twinhelix/git/org/cellink_attachments/191535/" . "191535/")
+ ("/home/twinhelix/git/org/cellink_attachments/" . "191535/")
+ ("/home/twinhelix/git/" . "org/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/twinhelix/git/org/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "racis.org"
+ "unito.org"
+ "refile.org"
+ "hsr.org"
+ "cellink.odt"
+ "cellink.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/twinhelix/git/org/" (24124 16228 500950 486000) "home.org" "work.org" "cellink.pdf~" "cellink_attachments/" "../" "missfont.log" "cellink.org" ".stfolder/" "refile.org~" "diary.org~" "unito.org~" "cellink.tex~" "racis.org~" "racis.org" "cellink.pdf" "diary.org" "client1" "hsr.org~" "hsr.org" "cellink.odt" "data/" "./" "unito.org" "refile.org" "cellink.tex" "cellink.org~")
+
+ ("/home/twinhelix/" (24124 16290 941195 167000) "i3status/" ".texlive2019/" "miLazyCracker/" ".cache/" "Games/" "mamma.xcf" ".minecraft/" ".FreeCAD/" "depot_tools/" ".dillo/" "xrandr_home_vert" ".reminders" ".oysttyerkey" "go/" ".zcompdump-debian-5.6.2" "cableHolder.FCStd" ".xbindkeysrc" ".signature" "xrandr_office" "xrandr_home2_vert" ".Rider2018.2/" ".angular-config.json" "xrandr_laptoponly" ".electrum/" ".rainbow_oauth" ".histfile" "sketchbook/" ".vsts/" ".vnc/" ".lesshst" ".calendars/" "xrandr_home" ".zshrc.pre-oh-my-zsh" "hdmi_cable_holder.stl" "PythonProjects/" ".Xdefaults" ".Rider2019.3/" ".Rider2019.1/" ".mozilla/" ".sane/" ".fltk/" ".zcompdump-debian-5.3.1" ".tmux.conf" ".zcompdump-debian-5.7.1" ".local/" ".bash_logout" ".yarn/" "java_error_in_RIDER.hprof" "test.org~" ".swt/" ".vim/" ".gnome/" "MusicSheets/" ".java/" ".PhpStorm2019.1/" ".dotnet/" ".vmware/" ".gnupg/" "VirtualBox VMs/" ".gtkrc-2.0" ".PyCharm2018.3/" "xrandr_projector_wxga_1280_side" "makehuman/" ".pki/" ".hashcat/" ".dmenu_cache" "invidious/" ".taskrc" ".eclipse/" "PDF/" "xrandr_office_3" "VPNArea/" "\\" ".thumbnails/" "Toru-3241856.mp3" ".swo" ".swp" "VM/" ".tkremindrc" ".dbeaver4/" ".putty/" "SaneScannerDriver/" "Presentazione corso/" ".zsh_history" ".emacs" ".dbus/" ".android/" "mfcuk/" ".gconf/" "geeknote/" ".dbeaver-drivers/" "Foto/" ".mplayer/" ".3T/" "myconf/" ".zshrc" "nextcloud/" ".sc" "Downloads/" "zshrc" "GoLangProjects/" ".yarnrc" ".config/" ".emacs~" "oysttyer/" "test.org" ".PyCharm2019.2/" ".elinks/" ".icons/" "Racis.ods" ".profile" "images.txt" ".xsession" "01.rar" "ebook/" "Calibre Library/" ".oh-my-zsh/" ".gitconfig" "RiderProjects/" ".claws-mail/" ".zcompdump" "TwinHelix/" ".mono/" "fontconfig/" ".recently-used" ".ssh/" "Sync/" ".bashrc" "mfoc/" "Casa/" ".DataGrip2019.1/" ".npm/" ".templateengine/" "prod.list.1" "videos.txt" "cache/" ".nixnote/" "Pictures/" ".ovftool.ssldb" ".xinitrc" "mbox" ".arduino/" ".mailcap" ".wget-hsts" ".Rider2019.2/" ".DataGrip2018.2/" ".python_history" ".GoLand2018.3/" ".w3m/" "Katia/" "git/" "getplayer-linux" ".i3/" "Viaggio3/" ".stack/" ".image.so" ".mysql_history" ".wine/" ".nuget/" ".task/" "autostop.sh" "get_cpu.sh" "TesiAlex/" ".designer/" "Video/" "Mail/" ".Xauthority" "mariadb" ".aspnet/" "xrandr_projector_fullhd_1920_mirror" "mamma.jpg" "Learning/" "OtherProjects/" ".cred.toml" "Music/" ".wsdl-viewer.xsl.swp" "Viaggio4/" ".geeknote/" ".emacs.d/" "cableHolder.FCStd1" "PycharmProjects/" ".davfs2/" ".wicd/" ".keras/" ".viminfo" ".vdirsyncer/" "Desktop/" "github.png" "../" "./")
+
+ ("/home/twinhelix/nextcloud/" (24121 20326 545902 29000) "Org/" "../" "./")
+
+ ("/home/" (23491 61301 384038 440000) "../" "twinhelix/" "./")
+
+ ("/home/twinhelix/git/org/cellink_attachments/" (24115 31348 419289 114000) "191535/" "191535.zip" "../" "Reattach RPi cable in Bottom Compartment.pdf" "./")
+
+ ("/home/twinhelix/git/org/cellink_attachments/191535/" (24115 27237 613586 85000) "../" "BROKEN_rpiAssembly.jpg" "Baseplate.jpg" "BROKEN_DisplayAssembly.jpg" "BaseplateDetail2.jpg" "BROKEN_displayRpiAssembly.jpg" "FIX_DisplayAssembly.jpg" "FIX_DisplayRpiAssembly.jpg" "./" "BaseplateDetail.jpg")
+
+ ("/home/twinhelix/git/org/cellink_attachments/191535/191535/" (24115 4576 0 0) "../" "BROKEN_rpiAssembly.jpg" "Baseplate.jpg" "BROKEN_DisplayAssembly.jpg" "BaseplateDetail2.jpg" "BROKEN_displayRpiAssembly.jpg" "FIX_DisplayAssembly.jpg" "FIX_DisplayRpiAssembly.jpg" "./" "BaseplateDetail.jpg")
+
+ ("/home/twinhelix/git/" (24112 27789 571493 665000) "../" "org/" "client2" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
