@@ -1,6 +1,7 @@
-# XPS15 with Debian 9
+# Linux configurations
 ## Basic software
-Login as root
+### Debian
+#### Sudo
 ```console
 root@bar:# apt-get install sudo
 root@bar:# visudo
@@ -14,16 +15,17 @@ or
 foo ALL=(ALL) NOPASSWD:ALL
 ```
 Logout and login with user
+#### Essentials 
 ```console
-foo@bar:$ sudo apt-get update && sudo apt-get upgrade
-foo@bar:$ sudo apt-get install git curl zsh tree vim bc tmux
-foo@bar:$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-foo@bar:$ chsh -s /bin/zsh
-foo@bar:$ zsh
-foo@bar:$ git clone https://www.github.com/manto89/myconf
-foo@bar:$ cp ./myconf/.zshrc ~/
-foo@bar:$ cp -r ./myconf/.oh-my-zsh ./
-foo@bar:$ vim ./zshrc
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install git curl zsh tree vim bc tmux
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+chsh -s /bin/zsh
+zsh
+git clone https://www.github.com/manto89/myconf
+cp ./myconf/.zshrc ~/
+cp -r ./myconf/.oh-my-zsh ~/
+vim ~/.zshrc
 ```
 Edit .zshrc, substitute $USER with your user
 ```
@@ -31,9 +33,9 @@ export ZSH=/home/$USER/.oh-my-zsh
 ```
 Update zsh config
 ```console
-foo@bar:$ source ~/.zshrc
+source ~/.zshrc
 ```
-## Install i3wm
+#### Install i3wm
 ```console
 foo@bar:$ sudo apt-get install i3
 ```
@@ -138,12 +140,12 @@ Reload i3
 ```
 Meta+Shift+R
 ```
-### Change terminal emulator
+#### Change terminal emulator
 ```console
 sudo update-alternatives --config x-terminal-emulator
 ```
 
-## AUTO MOUNT USB
+#### AUTO MOUNT USB
 Install udiskie
 ```console
 foo@bar:~$ sudo apt-get install python-setuptools udisks2 python-pip python-gobject python-yaml libgio2.0 gobject-introspection libgtk2.0-0 libnotify4 gettext gir1.2-notify-0.7
@@ -178,7 +180,7 @@ add the following text
 ```
 udiskie &
 ```
-## Install VirtualBox
+#### Install VirtualBox
 ```console
 foo@bar:~$ sudo apt install virtualbox virtualbox-guest-additions-iso
 foo@bar:~$ LatestVirtualBoxVersion=$(wget -qO - http://download.virtualbox.org/virtualbox/LATEST.TXT) && wget "http://download.virtualbox.org/virtualbox/${LatestVirtualBoxVersion}/Oracle_VM_VirtualBox_Extension_Pack-${LatestVirtualBoxVersion}.vbox-extpack"
@@ -188,7 +190,7 @@ To uninstall
 ```console
 foo@bar:~$ sudo VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
 ```
-## Install JetBrains Rider
+#### Install JetBrains Rider
 Install Mono Develop
 ```console
 foo@bar:~$ sudo apt install apt-transport-https dirmngr
@@ -204,4 +206,26 @@ foo@bar:~$ tar -xvf ./JetBrains.Rider-2018.2.3.tar.gz
 foo@bar:~$ sudo mkdir -p /opt/rider-2018.2.3
 foo@bar:~$ sudo cp -r ./JetBrains.Rider-2018.2.3/* /opt/rider-2018.2.3/
 foo@bar:~$ sudo ln -s /opt/rider /opt/rider-2018.2.3/bin/rider.sh
+```
+### OpenSuse
+#### Essentials 
+```console
+sudo zypper in git make zsh bc tmux
+chsh -s /bin/zsh
+zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+mkdir ~/git
+cd ~/git
+git clone https://www.github.com/manto89/myconf
+cp ./myconf/.zshrc ~/
+cp -r ./myconf/.oh-my-zsh ~/
+vim ~/.zshrc
+```
+Edit .zshrc, substitute $USER with your user
+```
+export ZSH=/home/$USER/.oh-my-zsh
+```
+Update zsh config
+```console
+source ~/.zshrc
 ```
