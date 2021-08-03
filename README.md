@@ -3,7 +3,7 @@
 ### OpenSuse
 #### Essentials 
 ```console
-sudo zypper in git make zsh bc tmux
+sudo zypper in git make zsh bc tmux pwgen
 ```
 ```console
 chsh -s /bin/zsh
