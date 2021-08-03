@@ -46,7 +46,7 @@ Download Rider, Pycharm, Idea. Then for each one extract in `/opt` and create li
 sudo tar xvf ~/Downloads/JetBrains.Rider-2021.2.tar.gz -C /opt
 ```
 ```console
-sudo ln -s /opt/rider-2021.2/bin/rider.sh /opt/rider
+sudo ln -s /opt/JetBrains\ Rider-2021.2/bin/rider.sh /opt/rider  
 ```
 ### Debian
 #### Sudo
