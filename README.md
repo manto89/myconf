@@ -40,6 +40,11 @@ Update zsh config
 ```console
 source ~/.zshrc
 ```
+Open Konsole and create a new *Profile* (Settings > Configure Konsole). Under command insert
+```console
+/bin/zsh -i -c "tmux attach-session -t $USER || tmux new-session -s $USER"
+```
+Save the profile and assign as default
 #### Jetbrains
 Download Rider, Pycharm, Idea. Then for each one extract in `/opt` and create link
 ```console
@@ -48,6 +53,43 @@ sudo tar xvf ~/Downloads/JetBrains.Rider-2021.2.tar.gz -C /opt
 ```console
 sudo ln -s /opt/JetBrains\ Rider-2021.2/bin/rider.sh /opt/rider  
 ```
+### Utilities
+#### Claws Mail
+```console
+sudo zypper in claws-mail
+```
+#### AnyDesk
+Follow instructions at http://rpm.anydesk.com/howto.html
+```console
+cat > AnyDesk-OpenSUSE.repo << "EOF" 
+```
+```console
+[anydesk]
+name=AnyDesk OpenSUSE - stable
+baseurl=http://rpm.anydesk.com/opensuse/$basearch/
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://keys.anydesk.com/repos/RPM-GPG-KEY
+EOF
+
+```
+```console
+sudo zypper addrepo --repo AnyDesk-OpenSUSE.repo
+```
+Grab binaries from 
+https://software.opensuse.org/download/package?package=pangox-compat&project=home%3Aberny%3Acamline
+and 
+https://software.opensuse.org/download/package?package=libpangox-1_0-0&project=home%3Aberny%3Acamline
+and install manually
+```console
+sudo rpm -ivh ./pangox-compat-0.0.2-4.14.x86_64.rpm
+sudo rpm -ivh ./libpangox-1_0-0-0.0.2-4.14.x86_64.rpm
+```
+Then install anydesk
+```console
+sudo zypper in anydesk
+```
+#### 
 ### Debian
 #### Sudo
 ```console
