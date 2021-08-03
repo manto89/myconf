@@ -89,7 +89,23 @@ Then install anydesk
 ```console
 sudo zypper in anydesk
 ```
-#### 
+#### VirtualBox
+```console
+sudo zypper in virtualbox
+```
+```console
+LatestVirtualBoxVersion=$(wget -qO - http://download.virtualbox.org/virtualbox/LATEST.TXT) && wget "http://download.virtualbox.org/virtualbox/${LatestVirtualBoxVersion}/Oracle_VM_VirtualBox_Extension_Pack-${LatestVirtualBoxVersion}.vbox-extpack"
+```
+```console
+sudo VBoxManage extpack install --replace Oracle_VM_VirtualBox_Extension_Pack-${LatestVirtualBoxVersion}.vbox-extpack 
+```
+```console
+foo@bar:~$ sudo apt install virtualbox virtualbox-guest-additions-iso
+```
+To uninstall
+```console
+foo@bar:~$ sudo VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
+```
 ### Debian
 #### Sudo
 ```console
