@@ -1,5 +1,53 @@
 # Linux configurations
 ## Basic software
+### OpenSuse
+#### Essentials 
+```console
+sudo zypper in git make zsh bc tmux
+```
+```console
+chsh -s /bin/zsh
+```
+```console
+zsh
+```
+```console
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+```console
+mkdir ~/git
+```
+```console
+cd ~/git
+```
+```console
+git clone https://www.github.com/manto89/myconf
+```
+```console
+cp ./myconf/.zshrc ~/
+```
+```console
+cp -r ./myconf/.oh-my-zsh ~/
+```
+```console
+vim ~/.zshrc
+```
+Edit .zshrc, substitute $USER with your user
+```console
+export ZSH=/home/$USER/.oh-my-zsh
+```
+Update zsh config
+```console
+source ~/.zshrc
+```
+#### Jetbrains
+Download Rider, Pycharm, Idea. Then for each one extract in `/opt` and create link
+```console
+sudo tar xvf ~/Downloads/JetBrains.Rider-2021.2.tar.gz -C /opt
+```
+```console
+sudo ln -s /opt/rider-2021.2/bin/rider.sh /opt/rider
+```
 ### Debian
 #### Sudo
 ```console
@@ -206,26 +254,4 @@ foo@bar:~$ tar -xvf ./JetBrains.Rider-2018.2.3.tar.gz
 foo@bar:~$ sudo mkdir -p /opt/rider-2018.2.3
 foo@bar:~$ sudo cp -r ./JetBrains.Rider-2018.2.3/* /opt/rider-2018.2.3/
 foo@bar:~$ sudo ln -s /opt/rider /opt/rider-2018.2.3/bin/rider.sh
-```
-### OpenSuse
-#### Essentials 
-```console
-sudo zypper in git make zsh bc tmux
-chsh -s /bin/zsh
-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-mkdir ~/git
-cd ~/git
-git clone https://www.github.com/manto89/myconf
-cp ./myconf/.zshrc ~/
-cp -r ./myconf/.oh-my-zsh ~/
-vim ~/.zshrc
-```
-Edit .zshrc, substitute $USER with your user
-```
-export ZSH=/home/$USER/.oh-my-zsh
-```
-Update zsh config
-```console
-source ~/.zshrc
 ```
