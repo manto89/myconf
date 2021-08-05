@@ -106,6 +106,29 @@ To uninstall
 ```console
 foo@bar:~$ sudo VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
 ```
+#### Ruby & Jekyll
+As per https://jekyllrb.com/docs/installation/other-linux/
+```console
+sudo zypper install -t pattern devel_ruby devel_C_C++
+```
+```console
+sudo zypper install ruby-devel
+```
+```console
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+```
+```console
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+```
+```console
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+```
+```console
+source ~/.bashrc
+```
+```console
+gem install jekyll bundler
+```
 ### Debian
 #### Sudo
 ```console
