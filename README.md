@@ -59,7 +59,7 @@ python -m ensurepip --upgrade
 
 #### Doom Emacs
 ```console
-sudo dnf install emacs ripgrep fd-find
+sudo dnf install emacs ripgrep fd-find cmake libtool
 ```
 ```console
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
@@ -93,6 +93,7 @@ Exec=emacsclient -c -a 'emacs' %F
 Open Emacs and enable some plugins (`SPC f P` > `init.el`):
 * nerdtree
 * csharp
+* vterm
 After changing the file, save it (`:w`) and reload the config (`SPC h r r`)
 
 To always open the emacs window in full screen add the following to the `config.el` (`SPC f P` > `config.el`):
