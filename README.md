@@ -1,7 +1,6 @@
 # Linux configurations
-## Basic software
-### Fedora
-#### Essentials
+## Fedora
+### Essentials
 ```console
 sudo dnf install git zsh bc tmux pwgen vim
 ```
@@ -45,12 +44,12 @@ Open Konsole and create a new *Profile* (Settings > Configure Konsole). Under co
 /bin/zsh -i -c "tmux attach-session -t $USER || tmux new-session -s $USER"
 ```
 Save the profile and assign as default
-#### Utilities
-##### Claws-Mail
+### Utilities
+#### Claws-Mail
 ```console
 sudo dnf install claws-mail claws-mail-plugins-pdf-viewer claws-mail-plugins-vcalendar claws-mail-plugins-fancy claws-mail-plugins-address-keeper
 ```
-##### VirtualBox
+#### VirtualBox
 ```console
 sudo dnf -y install @development-tools
 ```
@@ -71,11 +70,11 @@ EOF
 ```console
 sudo dnf install -y VirtualBox-7.0 virtualbox-guest-additions
 ```
-##### Backup (Borg)
+#### Backup (Borg)
 ```console
 sudo dnf install borgbackup borgmatic
 ```
-##### Anydesk
+#### Anydesk
 ```console
 cat <<EOF | sudo tee /etc/yum.repos.d/AnyDesk-Fedora.repo
 [anydesk]
@@ -90,8 +89,8 @@ EOF
 
 ```
 
-### OpenSuse
-#### Essentials 
+## OpenSuse
+### Essentials 
 ```console
 sudo zypper in git make zsh bc tmux pwgen
 ```
@@ -219,8 +218,8 @@ source ~/.bashrc
 ```console
 gem install jekyll bundler
 ```
-### Debian
-#### Sudo
+## Debian
+### Sudo
 ```console
 root@bar:# apt-get install sudo
 root@bar:# visudo
@@ -234,7 +233,7 @@ or
 foo ALL=(ALL) NOPASSWD:ALL
 ```
 Logout and login with user
-#### Essentials 
+### Essentials 
 ```console
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install git curl zsh tree vim bc tmux
@@ -254,7 +253,7 @@ Update zsh config
 ```console
 source ~/.zshrc
 ```
-#### Install i3wm
+#### i3wm
 ```console
 foo@bar:$ sudo apt-get install i3
 ```
@@ -399,7 +398,8 @@ add the following text
 ```
 udiskie &
 ```
-#### Install VirtualBox
+### Utilities
+#### VirtualBox
 ```console
 foo@bar:~$ sudo apt install virtualbox virtualbox-guest-additions-iso
 foo@bar:~$ LatestVirtualBoxVersion=$(wget -qO - http://download.virtualbox.org/virtualbox/LATEST.TXT) && wget "http://download.virtualbox.org/virtualbox/${LatestVirtualBoxVersion}/Oracle_VM_VirtualBox_Extension_Pack-${LatestVirtualBoxVersion}.vbox-extpack"
@@ -409,7 +409,7 @@ To uninstall
 ```console
 foo@bar:~$ sudo VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
 ```
-#### Install JetBrains Rider
+#### JetBrains Rider
 Install Mono Develop
 ```console
 foo@bar:~$ sudo apt install apt-transport-https dirmngr
