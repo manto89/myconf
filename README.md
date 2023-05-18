@@ -1,5 +1,95 @@
 # Linux configurations
 ## Basic software
+### Fedora
+#### Essentials
+```console
+sudo dnf install git zsh bc tmux pwgen vim
+```
+```console
+chsh -s /bin/zsh
+```
+```console
+zsh
+```
+```console
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+```console
+mkdir ~/git
+```
+```console
+cd ~/git
+```
+```console
+git clone https://www.github.com/manto89/myconf
+```
+```console
+cp ./myconf/.zshrc ~/
+```
+```console
+cp -r ./myconf/.oh-my-zsh ~/
+```
+```console
+vim ~/.zshrc
+```
+Edit .zshrc, substitute $USER with your user
+```console
+export ZSH=/home/$USER/.oh-my-zsh
+```
+Update zsh config
+```console
+source ~/.zshrc
+```
+Open Konsole and create a new *Profile* (Settings > Configure Konsole). Under command insert
+```console
+/bin/zsh -i -c "tmux attach-session -t $USER || tmux new-session -s $USER"
+```
+Save the profile and assign as default
+#### Utilities
+##### Claws-Mail
+```console
+sudo dnf install claws-mail claws-mail-plugins-pdf-viewer claws-mail-plugins-vcalendar claws-mail-plugins-fancy claws-mail-plugins-address-keeper
+```
+##### VirtualBox
+```console
+sudo dnf -y install @development-tools
+```
+```console
+sudo dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel
+```
+```console
+cat <<EOF | sudo tee /etc/yum.repos.d/virtualbox.repo 
+[virtualbox]
+name=Fedora \$releasever - \$basearch - VirtualBox
+baseurl=http://download.virtualbox.org/virtualbox/rpm/fedora/38/\$basearch
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://www.virtualbox.org/download/oracle_vbox_2016.asc
+EOF
+```
+```console
+sudo dnf install -y VirtualBox-7.0 virtualbox-guest-additions
+```
+##### Backup (Borg)
+```console
+sudo dnf install borgbackup borgmatic
+```
+##### Anydesk
+```console
+cat <<EOF | sudo tee /etc/yum.repos.d/AnyDesk-Fedora.repo
+[anydesk]
+name=AnyDesk Fedora - stable
+baseurl=http://rpm.anydesk.com/fedora/$basearch/
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://keys.anydesk.com/repos/RPM-GPG-KEY
+EOF
+```
+```console
+
+```
+
 ### OpenSuse
 #### Essentials 
 ```console
@@ -105,6 +195,29 @@ foo@bar:~$ sudo apt install virtualbox virtualbox-guest-additions-iso
 To uninstall
 ```console
 foo@bar:~$ sudo VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
+```
+#### Ruby & Jekyll
+As per https://jekyllrb.com/docs/installation/other-linux/
+```console
+sudo zypper install -t pattern devel_ruby devel_C_C++
+```
+```console
+sudo zypper install ruby-devel
+```
+```console
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+```
+```console
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+```
+```console
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+```
+```console
+source ~/.bashrc
+```
+```console
+gem install jekyll bundler
 ```
 ### Debian
 #### Sudo
