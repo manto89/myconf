@@ -8,7 +8,7 @@ fi
 
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
-  export PATH=$PATH:$HOME/.local/bin
+  export PATH=$PATH:$HOME/.local/bin:$HOME/.config/emacs/bin
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
