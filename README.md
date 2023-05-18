@@ -75,18 +75,19 @@ sudo dnf install -y VirtualBox-7.0 virtualbox-guest-additions
 sudo dnf install borgbackup borgmatic
 ```
 #### Anydesk
+For some reasons the Fedora repo doesn't include dependencies. Use Centos repo
 ```console
 cat <<EOF | sudo tee /etc/yum.repos.d/AnyDesk-Fedora.repo
 [anydesk]
 name=AnyDesk Fedora - stable
-baseurl=http://rpm.anydesk.com/fedora/$basearch/
+baseurl=http://rpm.anydesk.com/centos/$basearch/
 gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://keys.anydesk.com/repos/RPM-GPG-KEY
 EOF
 ```
 ```console
-
+sudo dnf install anydesk
 ```
 
 ## OpenSuse
