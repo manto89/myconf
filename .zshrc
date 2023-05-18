@@ -7,7 +7,8 @@ if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
 fi
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/manto/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
+  export PATH=$PATH:$HOME/.local/bin
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -100,3 +101,4 @@ alias gita="git add"
 alias gitc="git commit -m"
 alias gitp="git push"
 alias gits="git status"
+alias pyenv="python3 -m venv venv && source venv/bin/activate"
