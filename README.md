@@ -71,6 +71,39 @@ Confirm that everything is working
 ```console
 doom doctor
 ```
+---
+*THIS IS CURRENTLY NOT WORKING SINCE CHANGING THE CONFIGS AND RELOADING NEEDS ALSO THE SERVER TO BE RESTARTED*
+(to restart the server use `emacsclient -e "(kill-emacs)" && emacs -daemon`)
+Inside KDE Settings > Autostart  add Emacs as application. Then set the parameters as '-daemon'
+
+``` console
+sudo cp /usr/share/applications/emacs.desktop /usr/share/applications/emacsclient.desktop
+```
+Change the emacsclient.desktop so the executable becomes `emacsclient`. 
+``` console
+sudo vim /emacsclient.desktop
+```
+
+``` console
+...
+Exec=emacsclient -c -a 'emacs' %F
+...
+```
+---
+Open Emacs and enable some plugins (`SPC f P` > `init.el`):
+* nerdtree
+* csharp
+After changing the file, save it (`:w`) and reload the config (`SPC h r r`)
+
+To always open the emacs window in full screen add the following to the `config.el` (`SPC f P` > `config.el`):
+
+``` console
+...
+(add-hook 'window-setup-hook #'toggle-frame-maximized)
+```
+
+
+
 
 ### Utilities
 
