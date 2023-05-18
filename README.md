@@ -44,6 +44,21 @@ Open Konsole and create a new *Profile* (Settings > Configure Konsole). Under co
 /bin/zsh -i -c "tmux attach-session -t $USER || tmux new-session -s $USER"
 ```
 Save the profile and assign as default
+### Development
+### Interpreters
+```console
+sudo dnf install python rust
+```
+```console
+python -m ensurepip --upgrade
+```
+#### LunarVim
+```console
+sudo dnf install neovim rust
+```
+```console
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+```
 ### Utilities
 #### Claws-Mail
 ```console
