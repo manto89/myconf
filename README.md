@@ -1,5 +1,7 @@
 # Linux configurations
+
 ## Fedora
+
 ### Essentials
 ```console
 sudo dnf install git zsh bc tmux pwgen vim
@@ -44,26 +46,39 @@ Open Konsole and create a new *Profile* (Settings > Configure Konsole). Under co
 /bin/zsh -i -c "tmux attach-session -t $USER || tmux new-session -s $USER"
 ```
 Save the profile and assign as default
+
 ### Development
-### Interpreters
+
+#### Interpreters
 ```console
 sudo dnf install python rust
 ```
 ```console
 python -m ensurepip --upgrade
 ```
-#### LunarVim
+
+#### Doom Emacs
 ```console
-sudo dnf install neovim rust
+sudo dnf install emacs ripgrep fd-find
 ```
 ```console
-LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ```
+```console
+~/.config/emacs/bin/doom install
+```
+Confirm that everything is working
+```console
+doom doctor
+```
+
 ### Utilities
+
 #### Claws-Mail
 ```console
 sudo dnf install claws-mail claws-mail-plugins-pdf-viewer claws-mail-plugins-vcalendar claws-mail-plugins-fancy claws-mail-plugins-address-keeper
 ```
+
 #### VirtualBox
 ```console
 sudo dnf -y install @development-tools
@@ -85,10 +100,12 @@ EOF
 ```console
 sudo dnf install -y VirtualBox-7.0 virtualbox-guest-additions
 ```
+
 #### Backup (Borg)
 ```console
 sudo dnf install borgbackup borgmatic
 ```
+
 #### Anydesk
 For some reasons the Fedora repo doesn't include dependencies. Use Centos repo
 ```console
@@ -106,6 +123,7 @@ sudo dnf install anydesk
 ```
 
 ## OpenSuse
+
 ### Essentials 
 ```console
 sudo zypper in git make zsh bc tmux pwgen
@@ -150,6 +168,7 @@ Open Konsole and create a new *Profile* (Settings > Configure Konsole). Under co
 /bin/zsh -i -c "tmux attach-session -t $USER || tmux new-session -s $USER"
 ```
 Save the profile and assign as default
+
 #### Jetbrains
 Download Rider, Pycharm, Idea. Then for each one extract in `/opt` and create link
 ```console
@@ -158,11 +177,14 @@ sudo tar xvf ~/Downloads/JetBrains.Rider-2021.2.tar.gz -C /opt
 ```console
 sudo ln -s /opt/JetBrains\ Rider-2021.2/bin/rider.sh /opt/rider  
 ```
+
 ### Utilities
+
 #### Claws Mail
 ```console
 sudo zypper in claws-mail
 ```
+
 #### AnyDesk
 Follow instructions at http://rpm.anydesk.com/howto.html
 ```console
@@ -194,6 +216,7 @@ Then install anydesk
 ```console
 sudo zypper in anydesk
 ```
+
 #### VirtualBox
 ```console
 sudo zypper in virtualbox
@@ -211,6 +234,7 @@ To uninstall
 ```console
 foo@bar:~$ sudo VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
 ```
+
 #### Ruby & Jekyll
 As per https://jekyllrb.com/docs/installation/other-linux/
 ```console
@@ -234,7 +258,9 @@ source ~/.bashrc
 ```console
 gem install jekyll bundler
 ```
+
 ## Debian
+
 ### Sudo
 ```console
 root@bar:# apt-get install sudo
@@ -249,6 +275,7 @@ or
 foo ALL=(ALL) NOPASSWD:ALL
 ```
 Logout and login with user
+
 ### Essentials 
 ```console
 sudo apt-get update && sudo apt-get upgrade
@@ -269,6 +296,7 @@ Update zsh config
 ```console
 source ~/.zshrc
 ```
+
 #### i3wm
 ```console
 foo@bar:$ sudo apt-get install i3
@@ -281,7 +309,7 @@ foo@bar:$ cd i3status
 foo@bar:$ make && sudo make install
 foo@bar:$ vim /etc/i3status.conf
 ```
-```
+```console
 # i3status configuration file.
 # see "man i3status" for documentation.
 
@@ -374,6 +402,7 @@ Reload i3
 ```
 Meta+Shift+R
 ```
+
 #### Change terminal emulator
 ```console
 sudo update-alternatives --config x-terminal-emulator
@@ -414,7 +443,9 @@ add the following text
 ```
 udiskie &
 ```
+
 ### Utilities
+
 #### VirtualBox
 ```console
 foo@bar:~$ sudo apt install virtualbox virtualbox-guest-additions-iso
@@ -425,6 +456,7 @@ To uninstall
 ```console
 foo@bar:~$ sudo VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
 ```
+
 #### JetBrains Rider
 Install Mono Develop
 ```console
