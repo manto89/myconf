@@ -49,6 +49,16 @@ Save the profile and assign as default
 ```console
 sudo dnf install claws-mail claws-mail-plugins-pdf-viewer claws-mail-plugins-vcalendar claws-mail-plugins-fancy claws-mail-plugins-address-keeper
 ```
+#### Backup (Borg)
+```console
+sudo dnf install borgbackup borgmatic
+```
+#### Virtual Machine Manager (QEMU)
+```console
+sudo dnf install virt-manager
+```
+
+---DEPRECATED---
 #### VirtualBox
 ```console
 sudo dnf -y install @development-tools
@@ -69,10 +79,6 @@ EOF
 ```
 ```console
 sudo dnf install -y VirtualBox-7.0 virtualbox-guest-additions
-```
-#### Backup (Borg)
-```console
-sudo dnf install borgbackup borgmatic
 ```
 #### Anydesk
 For some reasons the Fedora repo doesn't include dependencies. Use Centos repo
