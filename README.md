@@ -58,6 +58,11 @@ sudo dnf install borgbackup borgmatic
 sudo dnf install virt-manager
 ```
 
+#### Podman
+```console
+sudo dnf install podman podman-compose
+```
+
 ---DEPRECATED---
 #### VirtualBox
 ```console
