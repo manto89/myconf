@@ -49,6 +49,7 @@ Save the profile and assign as default
 ```console
 sudo dnf install claws-mail claws-mail-plugins-pdf-viewer claws-mail-plugins-vcalendar claws-mail-plugins-fancy claws-mail-plugins-address-keeper
 ```
+Signature is configured in `Configuration` > [select account] > `Edit..` > `Compose` > `Signature` and usually is a file stored in `$HOME\.signature`
 #### Backup (Borg)
 ```console
 sudo dnf install borgbackup borgmatic
