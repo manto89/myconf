@@ -63,6 +63,12 @@ sudo dnf install virt-manager
 sudo dnf install podman podman-compose
 ```
 
+#### Node Version Manager
+https://github.com/nvm-sh/nvm
+```console
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+```
+
 ---DEPRECATED---
 #### VirtualBox
 ```console
