@@ -87,6 +87,10 @@ https://github.com/nvm-sh/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 ```
 
+#### Latex with fonts
+```console
+sudo dnf install texlive texlive-latex texlive-xetex texlive-lastpage texlive-sectsty texlive-ulem texlive-makecell texlive-fancyhdr dejavu-fonts-all
+```
 ---DEPRECATED---
 #### VirtualBox
 ```console
