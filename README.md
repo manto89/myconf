@@ -58,7 +58,24 @@ sudo dnf install borgbackup borgmatic
 ```console
 sudo dnf install virt-manager
 ```
-
+Since kvm only allows one shared folder, edit /etc/fstab to use bind mounts 
+```console
+sudo vim /etc/fstab
+```
+Add these lines, changing home directory as needed
+```
+/home/USER/Downloads /home/USER/WindowsShared/Downloads none bind
+/home/USER/Documents /home/USER/WindowsShared/Documents none bind
+```
+Then create all the folders
+```console
+mkdir -p /home/USER/WindowsShared/Downloads
+mkdir -p /home/USER/WindowsShared/Documents
+```
+If needed, mount all partitions by reloading fstab file
+```console
+sudo mount -a
+```
 #### Podman
 ```console
 sudo dnf install podman podman-compose
